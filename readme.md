@@ -75,4 +75,23 @@ roslaunch my_robot world.launch
 roslaunch ball_chaser ball_chaser.launch
 
 
+RTAB-Map Real Time Visualization
+
+Real Time Visulization is an additional node for real time visualization of feature mapping, loop closures, and more.
+It’s not recommended to use this tool while mapping in simulation due to the computing overhead. rtabmapviz is great to deploy on a real robot during live mapping to ensure that you are getting the necessary features to complete loop closures.
+
+
+Mapping: Database Viewer 
+
+Database Analysis
+
+The rtabmap-databaseViewer is a great tool for exploring your database when you are done generating it. It is isolated from ROS and allows for complete analysis of your mapping session.
+
+This is how you will check for loop closures, generate 3D maps for viewing, extract images, check feature mapping rich zones, and much more!
+
+
+Install rtabmap-ros package $ sudo apt-get install ros-${ROS_DISTRO}-rtabmap-ros
+
+https://knowledge.udacity.com/questions/458351
+https://knowledge.udacity.com/questions/849903
 

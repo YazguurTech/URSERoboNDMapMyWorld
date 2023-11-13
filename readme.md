@@ -95,3 +95,6 @@ Install rtabmap-ros package $ sudo apt-get install ros-${ROS_DISTRO}-rtabmap-ros
 https://knowledge.udacity.com/questions/458351
 https://knowledge.udacity.com/questions/849903
 
+
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
+

@@ -2,7 +2,7 @@
 
 <launch>
   <!-- Arguments for launch file with defaults provided -->
-  <arg name="database_path"     default="/media/user/New Volume/Udacity/mapmyworld_rtabmap.db"/>
+  <arg name="database_path"     default="$(find my_robot)/maps/mapmyworld_rtabmap.db"/>
   <arg name="rgb_topic"   default="/camera/rgb/image_raw"/>
   <arg name="depth_topic" default="/camera/depth/image_raw"/>
   <arg name="camera_info_topic" default="/camera/rgb/camera_info"/>  
@@ -10,7 +10,7 @@
   
   <!-- Mapping Node -->
   <group ns="rtabmap">
-    <node name="rtabmap" pkg="rtabmap_slam" type="rtabmap" output="screen">
+    <node name="rtabmap" pkg="rtabmap_slam" type="rtabmap" output="screen" args="--delete_db_on_start">
 
       <!-- Basic RTAB-Map Parameters -->
       <param name="database_path"       type="string" value="$(arg database_path)"/>

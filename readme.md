@@ -97,4 +97,9 @@ https://knowledge.udacity.com/questions/849903
 
 
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
+https://answers.ros.org/question/271481/rtabmap-issue-with-loop-closure/
+https://github.com/introlab/rtabmap/wiki/Robust-Graph-Optimization
+https://github.com/introlab/rtabmap/issues/418
+https://github.com/introlab/rtabmap_ros/issues/915
+https://github.com/introlab/rtabmap/issues/418
 

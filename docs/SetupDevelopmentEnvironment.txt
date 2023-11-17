@@ -1,0 +1,76 @@
+Projects: 
+1. Build My Map
+2. Go Chase It!
+3. Where Am I?
+4. Map My World
+5. Home Service Robot
+
+Installing ROS Noeric
+
+https://wiki.ros.org/noetic/Installation/Ubuntu
+
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt install curl # if you haven't already installed curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+sudo apt update
+sudo apt install ros-noetic-desktop-full    #sudo apt install ros-noetic-desktop
+source /opt/ros/noetic/setup.bash
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+sudo apt install python3-rosdep
+sudo rosdep init
+rosdep update
+
+
+Installing Gazebo
+
+https://classic.gazebosim.org/tutorials?tut=install_ubuntu
+
+curl -sSL http://get.gazebosim.org | sh
+
+$ sudo apt-get install ros-noetic-controller-manager
+
+
+#LOCALIZATION - AMCL (Adaptive Monte Carlo Localization)
+sudo apt-get install ros-noetic-navigation 
+sudo apt-get install ros-noetic-map-server 
+sudo apt-get install ros-noetic-move-base 
+sudo apt-get install ros-noetic-amcl
+
+sudo apt-get install libignition-math4-dev # gazebo 11
+sudo apt-get install protobuf-compiler
+# sudo apt-get install libignition-math2-dev protobuf-compiler # gazebo 7
+
+#MAPPING - RTAB-Map (Real-Time Appearance-Based Mapping)
+sudo apt-get install ros-noetic-rtabmap-ros
+
+
+
+# Install Visual Studio Code
+sudo apt-get install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install code
+
+
+# useful commands
+
+roslaunch my_robot world.launch
+
+rostopic
+rosrun
+rosnode
+
+rqt_graph
+rtabmap-databaseViewer
+
+
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
+

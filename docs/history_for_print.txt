@@ -1,0 +1,45 @@
+    1  sudo add-apt-repository ppa:yannubuntu/boot-repair
+    2  sudo apt-get update
+    3  sudo apt-get install -y boot-repair
+    4  boot repair
+    5  boot-repair
+    6  cd /var/log/boot-repair/20231116_233910/
+    7  gedit Boot-Info_20231116_2339.txt 
+    8  sudo add-apt-repository ppa:nilarmogard/webupd8
+    9  sudo add-apt-repository ppa:nilarimogard/webupd8
+   10  sudo apt-get update
+   11  sudo apt-get install woeusb
+   12  sudo apt install git p7zip-full python3-pip python3-wxgtk4.0 grub2-common grub-pc-bin
+   13  sudo pip3 install WoeUSB-ng
+   14  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+   15  sudo apt install curl 
+   16  curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+   17  sudo apt update
+   18  sudo apt install ros-noetic-desktop-full
+   19  echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+   20  source ~/.bashrc
+   21  sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+   22  sudo apt install python3-rosdep
+   23  sudo rosdep init
+   24  rosdep update
+   25  curl -sSL http://get.gazebosim.org | sh
+   26  sudo apt-get install ros-noetic-navigation sudo apt-get install ros-noetic-map-server sudo apt-get install ros-noetic-move-base sudo apt-get install ros-noetic-amcl
+   27  sudo apt-get install ros-noetic-navigation 
+   28  sudo apt-get install ros-noetic-map-server 
+   29  sudo apt-get install ros-noetic-move-base 
+   30  sudo apt-get install ros-noetic-amcl
+   31  sudo apt-get install libignition-math4-dev 
+   32  sudo apt-get install protobuf-compiler
+   33  sudo apt-get install ros-noetic-rtabmap-ros
+   34  gazebo
+   35  sudo apt-get install wget gpg
+   36  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+   37  sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+   38  sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+   39  rm -f packages.microsoft.gpg
+   40  sudo apt install apt-transport-https
+   41  sudo apt update
+   42  sudo apt install code
+   43  ls
+   44  cd Documents/
+   45  history > history_for_print.txt
